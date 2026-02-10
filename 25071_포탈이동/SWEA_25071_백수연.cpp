@@ -52,7 +52,7 @@ void testcase(int tc)
 int main() {
 
     int T;
-    cin >> T;
+    std::cin >> T;
 
     for (int i = 1; i <= T; i++) {
         testcase(i);
