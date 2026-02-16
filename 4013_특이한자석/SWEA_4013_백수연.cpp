@@ -5,6 +5,7 @@
 using std::cin;
 using std::cout;
 using std::vector;
+using std::ios;
 
 // 6: 바퀴 갯수 + 튀어나감,, 방지,,,2
 // 9: 톱날 갯수(8) + 각 톱니 빨간색 화살표 위치(1)
@@ -97,6 +98,9 @@ void solve (int tc)
 
 int main ()
 {
+    ios::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int T;
     cin >> T;
 
