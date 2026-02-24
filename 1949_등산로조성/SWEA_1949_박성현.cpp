@@ -1,9 +1,9 @@
 #include <iostream>
 #include <algorithm>
 
-using std::cin;
-using std::cout;
-using std::max;
+using ::std::cin;
+using ::std::cout;
+using ::std::max;
 
 // 지도의 가로/세로 크기
 int map_size;
@@ -36,6 +36,7 @@ void explore_trail(int current_row, int current_col, int current_length, bool ha
                 
                 // 다음 칸이 현재 칸보다 낮아서 그냥 지나갈 수 있는 경우
                 if (mountain_map[next_row][next_col] < mountain_map[current_row][current_col]) {
+                    // 방문 배열 체크
                     is_visited[next_row][next_col] = true;
                     explore_trail(next_row, next_col, current_length + 1, has_used_construction);
                     // 백트래킹
@@ -48,14 +49,14 @@ void explore_trail(int current_row, int current_col, int current_length, bool ha
                         
                         // 공사 전 원래 높이
                         int original_height = mountain_map[next_row][next_col];
-                        
+
                         // 현재 내 높이보다 딱 1만 낮게 깎음
                         mountain_map[next_row][next_col] = mountain_map[current_row][current_col] - 1;
-                        
+
                         is_visited[next_row][next_col] = true;
                         // 공사 했으므로 true
                         explore_trail(next_row, next_col, current_length + 1, true); 
-                        
+
                         // 백트래킹
                         is_visited[next_row][next_col] = false;
                         mountain_map[next_row][next_col] = original_height;
