@@ -1,2 +1,2 @@
-현대오토에버 벼락치기용 문제 바락바락 올라올 예정
-DFS, BFS만 패는 중
+알고리즘 다시 패는 중...
+https://www.acmicpc.net/problem/2798
